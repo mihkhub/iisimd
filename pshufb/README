@@ -1,0 +1,5 @@
+
+array[0]=0xa1b2c3d4
+array[1]=0x1a2b3c4d
+
+output=0x4d3c2b1ad4c3b2a1
