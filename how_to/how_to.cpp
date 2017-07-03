@@ -18,6 +18,7 @@
 #include "ctime"
 
 #include <immintrin.h>
+#include <inttypes.h>
 
 using namespace std;
 
@@ -231,10 +232,7 @@ main(int argc, char *argv[])
 
 		cout << "intrins4 yields a different result naive result: " << D
 
-		<< "
-
-		intrins4
-		result: " << C << endl;
+		<< "intrins4 result: " << C << endl;
 
 	}
 
@@ -272,7 +270,7 @@ dotmul_naive(short A[], short B[], short &C, const int SIZE)
 
 /********************************************************************************/
 
-void
+/*void
 
 dotmul_intrins1(short A[], short B[], short &C, const int SIZE)
 
@@ -282,13 +280,13 @@ dotmul_intrins1(short A[], short B[], short &C, const int SIZE)
 
 	short sarr[4];
 
-	register __int64 a, b;
+	register int64_t a, b;
 
 	register __m64 catch_mul, part_sum;
 
-	catch_mul = 0;
+	catch_mul;
 
-	part_sum = 0;
+	part_sum;
 
 	for (k = 0; k < SIZE; k += 4)
 
@@ -308,7 +306,7 @@ dotmul_intrins1(short A[], short B[], short &C, const int SIZE)
 
 	C = sarr[0] + sarr[1] + sarr[2] + sarr[3];
 
-}
+}*/
 
 /********************************************************************************/
 
@@ -324,9 +322,9 @@ dotmul_intrins2(short A[], short B[], short &C, const int SIZE)
 
 	register __m64 *a_ptr, *b_ptr, catch_mul, part_sum;
 
-	catch_mul = 0;
+	catch_mul;
 
-	part_sum = 0;
+	part_sum;
 
 	for (k = 0; k < SIZE; k += 4)
 
