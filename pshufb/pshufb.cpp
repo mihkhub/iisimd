@@ -4,7 +4,7 @@
 #include <immintrin.h>
 #include <inttypes.h>
 
-void print_arr(int *arr, size_t len)
+void print_arr(uint32_t *arr, size_t len)
 {
 	printf("\n");
 	for(size_t i =0; i < len; ++i)
@@ -15,7 +15,7 @@ void print_arr(int *arr, size_t len)
 }
 int main(int argc, char **argv)
 {
-	int as[2] = {0xa1b2c3d4,0x1a2b3c4d};
+	uint32_t as[2] = {0xa1b2c3d4,0x1a2b3c4d};
 	int64_t output= 0;
 	print_arr(as, 2);
 	/* Set packed 32-bit integers in dst with the supplied values. */
